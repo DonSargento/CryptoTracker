@@ -1,13 +1,97 @@
-body {
+
+body, html {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400; /* 300, 400, 700 */
+  background-image: linear-gradient( #888, #333 );
+  background-attachment: fixed;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* --------------------------- */
+
+.texto-select-currency {
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 400;
+  color: #eee;
+  text-shadow: 0 0 20px rgba( 0, 0, 0, 0.5 );
+  margin-top: 0.9rem;
 }
+#currency-select-grid-item > div {
+  background-color: #161616;
+  border-radius: 8px;
+  color: #fff;
+}
+#currency-select-grid-item > div > fieldset {
+  border-width: 0 !important;
+}
+
+/* <select> del Currency */
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+  border-radius: 8px !important;
+  background-color: #ddd !important;
+  /* color: #eee !important; */
+}
+
+/* --------------------------- */
+
+
+.crypto-card {
+  background-color: #161616 !important;
+  color: #ddd !important;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+  .crypto-card .crypto-image {
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25%;
+    max-width: 65%;
+  }
+  .crypto-card h2 {
+    font-size: 2rem;
+    padding: 0 1rem;
+    margin: 1.6rem 0 0;
+    font-weight: 700;
+    color: #fff;
+  }
+  .crypto-card h3 {
+    font-size: 1.1rem;
+    margin: 0.6rem 0 0;
+    padding: 0 0 1rem;
+    color: #888;
+    font-weight: 400;
+    border-bottom: 1px solid #444;
+  }
+  .crypto-card p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0.8rem 0 0.7rem;
+    white-space: nowrap;
+  }
+    .crypto-card p span {
+      font-size: 1rem;
+      position: relative;
+      bottom: 0.2rem;
+      color: #888;
+    }
+  .crypto-card p.crypto-precio {
+    border-bottom: 1px solid #444;
+  }
+  .crypto-card .crypto-up {
+    color: rgb(83, 255, 83);
+  }
+  .crypto-card .crypto-down {
+    color: rgb(255, 75, 75);
+  }
+  .crypto-card #crypto-graph-btn {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+  }
