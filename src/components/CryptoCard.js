@@ -10,6 +10,7 @@ import { ArrowUpward, ArrowDownward, Timeline } from '@mui/icons-material';
 
 const CryptoCard = ( { crypto } ) => {
 
+  
   const {
     loadingCryptos,
     currency,
@@ -30,7 +31,7 @@ const CryptoCard = ( { crypto } ) => {
         <h2>{ crypto.CoinInfo.FullName }</h2>
         <h3>{ crypto.CoinInfo.Name }</h3>
         {
-          loadingCryptos
+          loadingCryptos || !crypto.RAW
             ? <><p className="crypto-precio">---</p><p>---</p></>
             : <>
                 <p className="crypto-precio"><span>Price</span>{

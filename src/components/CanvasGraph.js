@@ -20,7 +20,6 @@ const CanvasGraph = () => {
     setDatosCrypto
   } = useContext( CryptoContext );
 
-  // console.log( 'from CanvasGraph', currency, crypto );
 
   const canvasRef = useRef();
 
@@ -32,7 +31,7 @@ const CanvasGraph = () => {
     if( modalOpen ){
       if( updateGraphData ){
         const loadGraphData = async () => {
-          const url = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=${ datosCrypto.name }&tsym=${ currency }&limit=30`;
+          const url = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=${ datosCrypto.name }&tsym=${ currency }&limit=30&api_key=33a4d62b48b549dd31c1dc361aacfaf43063d98c6c0642b235b2ac8cf7bfbbe1`;
           const response = await fetch( url );
           const datos = await response.json();
           setGraphData( datos.Data );

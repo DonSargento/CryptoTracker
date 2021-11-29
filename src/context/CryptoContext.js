@@ -32,7 +32,7 @@ const CryptoProvider = ( props ) => {
   // Cargamos las Cryptomonedas ( al inicio y cuando cambia de 'currency' )
   useEffect( () => {
     const loadCrypto = async () => {
-      const url = `https://min-api.cryptocompare.com/data/top/totalvolfull?limit=12&tsym=${ currency }`;
+      const url = `https://min-api.cryptocompare.com/data/top/totalvolfull?limit=12&tsym=${ currency }&api_key=33a4d62b48b549dd31c1dc361aacfaf43063d98c6c0642b235b2ac8cf7bfbbe1`;
       const response = await fetch( url );
       const datos = await response.json();
       setTopCryptos( datos.Data );
