@@ -5,6 +5,9 @@ import { CryptoContext } from '../context/CryptoContext';
 import { Modal, Box } from '@mui/material';
 import CanvasGraph from './CanvasGraph';
 
+import CloseIcon from '@mui/icons-material/Close';
+import { Close } from '@mui/icons-material';
+
 const boxStyle = {
   position : 'absolute',
   top : '50%',
@@ -42,6 +45,13 @@ const ModalGraph = () => {
         sx={ boxStyle }
         style={ { padding : 0 } }
       >
+        
+        <div style={ {
+          right : 20,
+          top : -40,
+          position : 'absolute',
+          color : '#fff'
+        } } onClick={ () => setModalOpen( false ) } ><Close fontSize="large" /></div>
         <h1
           style={ {
             color : '#fff',

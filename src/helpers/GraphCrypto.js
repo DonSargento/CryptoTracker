@@ -5,6 +5,7 @@ export const drawGraph = ( ctx, graphData, datosCrypto, setDatosCrypto, currency
 
   // Ajustamos el ancho del canvas ( del mismo ancho que su contenedor )
   ctx.canvas.width = ctx.canvas.parentNode.offsetWidth;
+  ctx.canvas.height = Math.min( 450, Math.round( window.innerHeight * 0.6 ) );
   
   const margenW = 60;
   const margenH = 60;
